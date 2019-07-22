@@ -2,16 +2,19 @@
 
 {% block title %}Detail{% endblock title %} 
 
-{% block content %}
-    <p>{{destination.name}}</p>
+{% block content %} 
+<div class="card container" style="background-color:#faeee1">
+<body style="background-image: url('https://previews.123rf.com/images/zhudifeng/zhudifeng1205/zhudifeng120503337/13573041-an-old-brass-compass-on-a-treasure-map-background.jpg');">
+    <h1 class="container align-center btn btn-secondary btn-lg btn-block">{{destination.name}}</h1>
     <p>{{destination.description}}</p>
-    <p>{{destination.activities}}</p>
-    <p><img src="{{destination.pretty_picture.url}}"></p>
-    <p>{{destination.optimal_visiting_season}}</p>
+    <p><span style="font-style: italic; font-weight: bolder;">Activities to enjoy here include: </span>{{destination.activities}}</p>
+    <p><img class="card align center container" style="width:40rem" src="{{destination.pretty_picture.url}}"></p>
+    <p><span style="font-style: italic; font-weight: bolder;">Best time of year to visit:  </span>{{destination.optimal_visiting_season}}</p>
     <a href="{% url 'destination-update' destination.id %}">
-        <button>Update</button>
-    </a>
+        <button class="btn btn-success">Update</button></a>
     <a href="{% url 'destination-delete' destination.id %}">
-        <button>Delete</button>
+        <button class="btn btn-danger">Delete</button>
     </a>
+</div>
+</body>
 {% endblock content %}

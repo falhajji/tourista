@@ -3,14 +3,21 @@
 {% block title %}List{% endblock title %}
 
 {% block content %}
-<br>
-<div class="row">
-  {% for destination in destinations %}
-  <a href="{% url 'destination-detail' destination.id %}">
-    <img src="{{destination.pretty_picture.url}}" />
-    <p>{{destination.name}}</p>
-    <p>{{destination.activities}}</p>
-  </a>
-  {% endfor %}
-</div>
+<body style="background-image: url('https://previews.123rf.com/images/zhudifeng/zhudifeng1205/zhudifeng120503337/13573041-an-old-brass-compass-on-a-treasure-map-background.jpg');">	
+	<br>
+	<div class="row">
+	  {% for destination in destinations %}
+	  <div class="card col-3 container" style="background-color:#faeee1">
+		  <a class="text-dark" href="{% url 'destination-detail' destination.id %}">
+
+		    <img style="margin-top: 10px;width: 250px; height: 200px" class="card-img-top boxes" src="{{destination.pretty_picture.url}}" />
+		    
+		    <h5 class="card-title"><center><header><strong><button type="button" class="btn btn-secondary btn-lg btn-block">{{destination.name}}</center></header></strong></h5></button>
+		    <p class="activies"><i><u><b>Highlights:</b></u></i></p>
+			<p>{{destination.activities}}</p>
+		  </a>
+	  </div>
+	  {% endfor %}
+	</div>
+</body>
 {% endblock content %}

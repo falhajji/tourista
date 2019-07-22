@@ -1,0 +1,27 @@
+
+.body {
+	background-image: url('https://previews.123rf.com/images/zhudifeng/zhudifeng1205/zhudifeng120503337/13573041-an-old-brass-compass-on-a-treasure-map-background.jpg')
+}
+
+
+.card-img-top {
+	align-items: 
+}
+
+.card-title {
+	font-style: bold;
+}
+
+.boxes {
+	margin-top: 100px;
+}
+
+.class {
+	font-weight: bolder;
+}
+
+.container {
+	font-weight: bold
+}
+
+/*<button type="button" class="btn btn-secondary btn-lg btn-block">*/

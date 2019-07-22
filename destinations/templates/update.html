@@ -4,9 +4,16 @@
 {% block title %}Update{% endblock title %}
 
 {% block content %}
-<form action="{% url 'destination-update' destination_obj.id %}" method="POST" enctype="multipart/form-data">
-  {% csrf_token %}
-  {{form.as_p}}
-  <input type="submit" value="Update">
-</form>
+<div class="card container" style="background-color:#faeee1">
+<body style="font-weight: bold; background-image: url('https://previews.123rf.com/images/zhudifeng/zhudifeng1205/zhudifeng120503337/13573041-an-old-brass-compass-on-a-treasure-map-background.jpg');">	
+
+	<form action="{% url 'destination-update' destination_obj.id %}" method="POST" enctype="multipart/form-data">
+	  {% csrf_token %}
+	  {{form|crispy}}
+	  <input type="submit" value="Update">
+
+
+	</form>
+</div>
+</body>
 {% endblock content %}
